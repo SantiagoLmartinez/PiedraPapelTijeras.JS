@@ -2,6 +2,7 @@ const _piedraBtn = document.querySelector('.piedra')
 const _papelBtn = document.querySelector('.papel')
 const _tijerasBtn = document.querySelector('.tijeras')
 const _robotChoise = document.querySelector('.piedra')
+_robotChoiseContainer = document.querySelector('.robotChoiseContainer')
 
 const piedraValue = 1
 const papelValue = 2
@@ -35,6 +36,8 @@ const playerChoise = (ch) =>{
 const choiseRobot = (ch) =>{
      ch = Math.floor(Math.random() *3) + 1 
     console.log('Robot :',ch)
+    printRobotChoise(ch)
+
     return  ch;
 }
 
@@ -67,6 +70,25 @@ const winner = (player, robot) =>  {
     if(player === robot){
         console.log('Empate')
     }
+}
 
-
+// pintar en pantalla que eligio el robot
+const printRobotChoise = (ch) =>{
+    _robotChoiseContainer.innerHTML= ''
+    if(ch === 1){
+        _robotChoiseContainer.innerHTML= `<img class="" src="svg/stone-576268.svg" alt="tijeras">`
+        return
+    }
+    if(ch === 2){
+        _robotChoiseContainer.innerHTML= `
+        <img class="" src="svg/scroll-34696.svg" alt="tijeras">
+        `
+        return
+    }
+    if(ch === 3){
+        _robotChoiseContainer.innerHTML= `<img class="" src="svg/scissors-1297454.svg" alt="tijeras">`
+        return
+    }
+    // _robotChoiseContainer.innerHTML= 
+    
 }
