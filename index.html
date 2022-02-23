@@ -11,9 +11,11 @@
 </head>
 <body>
 
-    <div class="container d-flex ">
-        <div class="row d-flex w-50 my-5 mx-auto border border-dark border-2 rounded ">
-            <h2 class="bg-primary text-white text-center border-bottom border-dark">El mejor de 3 gana la partida ¡mucha suerte!</h2>
+    <div class="container ">
+        <div class="row w-50 my-2 border border-dark border-2 rounded ">
+            <div class="col-12">
+                <h2 class="bg-primary text-white text-center border-bottom border-dark">El mejor de 3 gana la partida ¡mucha suerte!</h2>
+            </div>
             <!-- <div class="border border-dark"></div> -->
             <div class="piedra c1 col mx-2">Presiona para jugar
                 <img src="svg/stone-576268.svg" alt="piedra">
@@ -26,25 +28,40 @@
             </div>
             <!-- vs -->
             <div class="row mx-auto my-2">
-                <!-- <div class="col "></div> -->
                 <div class="col  d-flex justify-content-center">
                     <h2>- - - - VS - - - -</h2>
                 </div>
-                <!-- <div class="col"></div> -->
             </div>
             <!-- pc -->
             <div class="row">
-                <!-- <div class="col"></div> -->
-                <!-- <div class="col"></div> -->
+            
                 <div class="col d-flex ">
                     <div id="machine" class="machine col">
-                        <img class="" src="svg/scissors-1297454.svg" alt="tijeras">
+                        <div class="robotChoiseContainer">
+<!-- 
+                            <img class="" src="svg/scroll-34696.svg" alt="tijeras">
+                            <img class="" src="svg/stone-576268.svg" alt="tijeras"> -->
+
+                        </div>
                     </div>
-                    <img class="w-50" src="svg/robot-312566.svg" alt="robot">
+                    <img class="robotImg w-50" src="svg/robot-312566.svg" alt="robot">
                 </div>
             </div>
         </div>
-
+        <!-- tablero -->
+            <!-- <div class="row  w-50 flex-column">
+                <div class="col">User: <span class="userPoints">0</span> </div>
+                <div class="col">Robot: <span class="robotPoints">0</span> </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="row d-flex flex-column">
+                <div class="col">User: <span class="userPoints">0</span> </div>
+                <div class="col">Robot: <span class="robotPoints">0</span> </div>
+            </div>
+        </div>
     </div>
     <!-- scripts -->
     <script src="js/main.js"></script>

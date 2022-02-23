@@ -15,6 +15,8 @@ const papelValue = 2
 const tijerasValue = 3
 
 let userPoints = 0
+
+
 let robotPoints = 0
 
 // events listener
@@ -52,39 +54,47 @@ const choiseRobot = (ch) =>{
 }
 // elegir ganador
 const winner = (player, robot) =>  {
+    if(userPoints === 3){
+        alert('Ganaste')
+        return
+    }
+    if(robotPoints === 3){
+        alert('Perdiste')
+        return    
+    }
 
     if(player === 2 && robot === 1){
-        console.log('papel gana contra piedras')
+        console.log('papel gana contra piedras // USER + 1 ')
         _userPoints.textContent = `${ userPoints = userPoints + 1 }`
         return 
     }
 
     if(player === 2 && robot === 3){
-        console.log('papel pierde contra tijeras')
+        console.log('papel pierde contra tijeras // ROBOT + 1')
         _robotPoints.textContent = `${robotPoints = robotPoints + 1 }`
         return  
     }
 
     if(player === 1 && robot === 3){
-        console.log('piedra gana contra tijeras')
+        console.log('piedra gana contra tijeras // USER + 1')
         _userPoints.textContent = `${userPoints = userPoints +1}`
 
         return 
     }
     if(player === 1 && robot === 2){
-        console.log('piedra pierde contra papel')
+        console.log('piedra pierde contra papel // ROBOT + 1')
         _robotPoints.textContent = `${robotPoints = robotPoints +1 }`
 
         return 
     }
     if(player === 3 && robot === 1){
-        console.log('tijeras pierde contra piedra')
+        console.log('tijeras pierde contra piedra // ROBOT + 1')
         _robotPoints.textContent = `${robotPoints = robotPoints  +1}`
 
         return 
     }
     if(player === 3 && robot === 2){
-        console.log('tijeras gana contra papel')
+        console.log('tijeras gana contra papel // USER + 1')
         _userPoints.textContent = `${userPoints = userPoints +1 }`
 
         return 
