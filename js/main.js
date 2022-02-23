@@ -2,7 +2,6 @@ const _piedraBtn = document.querySelector('.piedra')
 const _papelBtn = document.querySelector('.papel')
 const _tijerasBtn = document.querySelector('.tijeras')
 const _robotChoise = document.querySelector('.piedra')
-// let robotCh = Math.floor(Math.random() *3) + 1 
 
 const piedraValue = 1
 const papelValue = 2
@@ -28,16 +27,15 @@ _tijerasBtn.addEventListener('click', (e)=>{
 })
 
 // function
-const playerChoise = (choisePlayer) =>{
-    // winner(choisePlayer, choiseRobot() )
-    console.log('Player :', choisePlayer)
-    return  choisePlayer
+const playerChoise = (ch) =>{
+    console.log('Player :', ch)
+    return  ch
 }
 
-const choiseRobot = (robotCh) =>{
-     robotCh = Math.floor(Math.random() *3) + 1 
-    console.log('Robot :',robotCh)
-    return  robotCh;
+const choiseRobot = (ch) =>{
+     ch = Math.floor(Math.random() *3) + 1 
+    console.log('Robot :',ch)
+    return  ch;
 }
 
 const winner = (player, robot) =>  {
