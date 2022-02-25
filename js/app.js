@@ -139,7 +139,7 @@ const points = () =>{
         setTimeout(() => { _alertaPerdedora.classList.add('d-none')
         location.reload();
 
-    }, 3000);
+    }, 4000);
         // alert('Perdiste')
     }
 }
