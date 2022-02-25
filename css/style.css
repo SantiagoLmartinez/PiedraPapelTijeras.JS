@@ -10,6 +10,7 @@
 
 }
 
+
 #app-container{
     width: 70%;
 }
@@ -42,7 +43,9 @@ article a{
 }
 
 @media (max-width: 500px) {
-
+    .appContainer{
+        margin-top: 5em;
+    }
     #app-container{
         width: 100%;
         margin: 0;
