@@ -40,19 +40,19 @@ const robotChoise = () =>{
             
             if(ch === 1){
                 _machine.innerHTML = `
-                <img id="piedra" class="" src="svg/piedra.svg" alt="piedra">`
+                <img id="piedra" class="w-75 " src="svg/piedra.svg" alt="piedra">`
                 _robotJugada.innerHTML = 'Piedra'
             }
 
             if(ch === 2){
-                _machine.innerHTML = '<img id="piedra" class="" src="svg/papel.svg" alt="piedra">'
+                _machine.innerHTML = '<img id="piedra" class="w-75 " src="svg/papel.svg" alt="piedra">'
                 _robotJugada.innerHTML = 'Papel'
 
                 // console.log('papel')
             }
 
             if(ch === 3){
-                _machine.innerHTML = '<img id="piedra" class="" src="svg/tijeras.svg" alt="piedra">'
+                _machine.innerHTML = '<img id="piedra" class="w-75 " src="svg/tijeras.svg" alt="piedra">'
                 _robotJugada.innerHTML = 'Tijeras'
                 
                 // console.log('tijeras')
