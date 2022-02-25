@@ -14,7 +14,7 @@
     width: 80%;
 }
 
-#alertaGanadora{
+#alertaGanadora, #alertaPerdedora {
     position: absolute;
     top: 200;
     /* height: 100vh; */
