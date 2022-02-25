@@ -15,6 +15,9 @@ const _machine = document.getElementById('machine')
 const _userJugada = document.getElementById('userjugada')
 const _robotJugada = document.getElementById('robotJugada')
 
+// alertas
+const _alertaGanadora = document.getElementById('alertaGanadora')
+const _alertaPerdedora = document.getElementById('alertaPerdedora')
 
 const playerChoise = (ch) =>{
     console.log('User: ',ch)
@@ -122,11 +125,22 @@ const points = () =>{
     _robotPoints.innerHTML = robotPoints
 
     if(userPoints === 3){
-        alert('GANASTE')
+        _alertaGanadora.classList.remove('d-none')
+        setTimeout(() => { _alertaGanadora.classList.add('d-none')
+        location.reload();
+
+    }, 6000);
+
+        // alert('GANASTE')
     }
     
     if(robotPoints === 3){
-        alert('Perdiste')
+        _alertaPerdedora.classList.remove('d-none')
+        setTimeout(() => { _alertaPerdedora.classList.add('d-none')
+        location.reload();
+
+    }, 3000);
+        // alert('Perdiste')
     }
 }
 
