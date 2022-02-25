@@ -14,12 +14,30 @@
     width: 80%;
 }
 
+#alertaGanadora{
+    position: absolute;
+    top: 200;
+    /* height: 100vh; */
+    /* right: ;: 10; */
+}
+article a{
+    text-decoration: none;
+    padding: 0.4em;
+}
+.icon{
+    width: 30px;
+}
+
 @media (max-width: 800px) {
 
     #app-container{
         width: 90%;
         margin: 0;
         padding: 0;
+    }
+    article a{
+        text-decoration: none;
+        padding: 0  ;
     }
 }
 
