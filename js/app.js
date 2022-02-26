@@ -18,6 +18,7 @@ const _robotJugada = document.getElementById('robotJugada')
 // alertas
 const _alertaGanadora = document.getElementById('alertaGanadora')
 const _alertaPerdedora = document.getElementById('alertaPerdedora')
+const _btnCerrarAlerta = document.querySelector('.btn-close')
 
 const playerChoise = (ch) =>{
     console.log('User: ',ch)
@@ -127,9 +128,9 @@ const points = () =>{
     if(userPoints === 3){
         _alertaGanadora.classList.remove('d-none')
         setTimeout(() => { _alertaGanadora.classList.add('d-none')
-        location.reload();
+        // location.reload();
 
-    }, 6000);
+    }, 9000);
 
         // alert('GANASTE')
     }
@@ -137,9 +138,9 @@ const points = () =>{
     if(robotPoints === 3){
         _alertaPerdedora.classList.remove('d-none')
         setTimeout(() => { _alertaPerdedora.classList.add('d-none')
-        location.reload();
+        // location.reload();
 
-    }, 4000);
+    }, 9000);
         // alert('Perdiste')
     }
 }
@@ -167,4 +168,8 @@ _tijerasBtn.addEventListener('click', (e)=>{
     winner(playerChoise(tijeras), robotChoise() )
 })
 
+_btnCerrarAlerta.addEventListener('click', ()=>{
+    location.reload();
+
+})
 // points()
