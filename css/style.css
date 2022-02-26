@@ -55,4 +55,7 @@ article a{
         text-decoration: none;
         padding: 0;
     }
+    .icon{
+        width: 25px;
+    }
 }
