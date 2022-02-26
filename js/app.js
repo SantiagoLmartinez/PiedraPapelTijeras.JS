@@ -2,6 +2,7 @@ const piedra = 1
 const papel = 2
 const tijeras = 3
 
+
 let userPoints = 0
 let robotPoints = 0
 
@@ -9,6 +10,8 @@ let robotPoints = 0
 const _piedraBtn = document.querySelector('.piedra')
 const _papelBtn = document.querySelector('.papel')
 const _tijerasBtn = document.querySelector('.tijeras')
+
+const _piedr = 'piedra'
 
 const _machine = document.getElementById('machine')
 
@@ -26,18 +29,21 @@ const playerChoise = (ch) =>{
 
 }
 
+
+
 // robot play 
 const robotChoise = () =>{
-    const _spinner = document.getElementById('spinner')
+    // const _spinner = document.getElementById('spinner')
     // const _machine = document.getElementById('machine')
     ch = Math.floor(Math.random() *3) + 1 
+    
 
-    _spinner.classList.remove('d-none')   
+    // _spinner.classList.remove('d-none')   
     _machine.innerHTML = ''     
         setTimeout( 
         function(){
-            
-            _spinner.classList.add('d-none')
+            clearInterval(interval)
+            // _spinner.classList.add('d-none')
             
             if(ch === 1){
                 _machine.innerHTML = `
@@ -49,16 +55,14 @@ const robotChoise = () =>{
                 _machine.innerHTML = '<img id="piedra" class="w-75 " src="svg/papel.svg" alt="piedra">'
                 _robotJugada.innerHTML = 'Papel'
 
-                // console.log('papel')
             }
 
             if(ch === 3){
                 _machine.innerHTML = '<img id="piedra" class="w-75 " src="svg/tijeras.svg" alt="piedra">'
                 _robotJugada.innerHTML = 'Tijeras'
                 
-                // console.log('tijeras')
             }
-        },1000)
+        },2000)
 
 
 
@@ -66,10 +70,22 @@ const robotChoise = () =>{
     return ch 
 }
 
+function machineRandom(ch){
+    ch = Math.floor(Math.random() *3) + 1 
+    return ch
+}
+
 // select winner
 
 const winner = (playerChoise, robotChoise) =>{
-    // points()
+interval = setInterval(()=>{
+    const robotChoise2 = machineRandom();
+    if(robotChoise2 === 1){_machine.innerHTML = `<h2>Piedra</h2>`}
+    if(robotChoise2 === 2){_machine.innerHTML = `<h2>Papel</h2>`}
+    if(robotChoise2 === 3){_machine.innerHTML = `<h2>Tijeras</h2>`}
+    // console.log(robotChoise2)
+},500)
+
     setTimeout( 
         function(){
             if(playerChoise === robotChoise){
@@ -117,6 +133,8 @@ const winner = (playerChoise, robotChoise) =>{
         },1000)
 }
 
+
+
 const points = () =>{
     // puntos
     const _userPoints = document.querySelector('.userPoints')
@@ -148,6 +166,7 @@ const points = () =>{
 
 //Player play 
 _piedraBtn.addEventListener('click', (e)=>{
+    
     _userJugada.innerHTML = 'Piedra'
     // console.log ('diste click en piedra')
     winner(playerChoise(piedra), robotChoise())
