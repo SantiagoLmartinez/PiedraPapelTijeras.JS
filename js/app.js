@@ -22,6 +22,7 @@ const _robotJugada = document.getElementById('robotJugada')
 const _alertaGanadora = document.getElementById('alertaGanadora')
 const _alertaPerdedora = document.getElementById('alertaPerdedora')
 const _btnCerrarAlerta = document.querySelector('.btn-close')
+const _btnCerrarAlerta2 = document.querySelector('#closeLose')
 
 const playerChoise = (ch) =>{
     console.log('User: ',ch)
@@ -188,6 +189,11 @@ _tijerasBtn.addEventListener('click', (e)=>{
 })
 
 _btnCerrarAlerta.addEventListener('click', ()=>{
+    location.reload();
+
+})
+
+_btnCerrarAlerta2.addEventListener('click', ()=>{
     location.reload();
 
 })
